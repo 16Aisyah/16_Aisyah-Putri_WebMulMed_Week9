@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas1</title>
+	<link rel="stylesheet" type="text/css" href="tugas1.css">
+</head>
+<body>
+    <h1>Form Registrasi</h1>
+	<div class="login">
+		<form name="formulir" onSubmit="validasi()">
+			<div>
+				<label>Nama :</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+            <div>
+				<label>Username :</label>
+				<input type="username" name="username" id="username" />
+			</div>
+            <div>
+				<label>Email :</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>Password :</label>
+				<input type="password" name="password" id="password" />
+			</div>
+			<div>
+				<label>No Telepon :</label>
+				<input type="telepon" name="telepon" id="telepon"/>
+			</div>
+            <div>
+				<label>Jenis Kelamin :</label>
+                <select id="select">
+                    <option value="laki-laki">Laki - Laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+			</div>
+            <div>
+				<label>Alamat Website :</label>
+				<input type="alamatweb" name="alamatweb" id="alamatweb"/>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script language=javascript>
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var username = document.getElementById("username").value;
+		var email = document.getElementById("email").value;
+		if (nama == "")
+        {
+			alert("Masukkan nama Anda");
+		}
+        else if (username == "")
+        {
+			alert("Masukkan Username");
+		}
+		else if (email == "")
+        {
+			alert("Masukkan Email");
+		}
+	}
+</script>
+</html>

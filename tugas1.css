@@ -1,0 +1,54 @@
+body {
+    background: palevioletred;
+    font-family: sans-serif;
+  }
+
+  h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+  }
+   
+  .login {
+    padding: 1em;
+    margin: 2em auto;
+    width: 17em;
+    background: #fff;
+    border-radius: 3px;
+  }
+   
+  label {
+    font-size: 10pt;
+    color: #555;
+  }
+
+  #select{
+    padding: 8px;
+    width: 100%;
+    background: #efefef;
+    border: 0;
+    font-size: 10pt;
+    margin: 6px 0px;
+  }
+   
+  input[type="text"],
+  input[type="username"],
+  input[type="email"],
+  input[type="password"],
+  input[type="telepon"],
+  input[type="alamatweb"],
+  textarea {
+    padding: 8px;
+    width: 95%;
+    background: #efefef;
+    border: 0;
+    font-size: 10pt;
+    margin: 6px 0px;
+  }
+   
+  .tombol {
+    background: palevioletred;
+    color: #fff;
+    border: 0;
+    padding: 5px 8px;
+  }
