@@ -22,7 +22,7 @@ body {
     color: #555;
   }
 
-  #select{
+  #gender{
     padding: 8px;
     width: 100%;
     background: #efefef;
@@ -49,6 +49,8 @@ body {
   .tombol {
     background: palevioletred;
     color: #fff;
+    padding: 8px;
+    width: 101%;
     border: 0;
-    padding: 5px 8px;
+    padding: 6px 0px;
   }

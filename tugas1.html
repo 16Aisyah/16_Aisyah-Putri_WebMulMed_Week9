@@ -30,7 +30,7 @@
 			</div>
             <div>
 				<label>Jenis Kelamin :</label>
-                <select id="select">
+                <select name="gender" id="gender">
                     <option value="laki-laki">Laki - Laki</option>
                     <option value="perempuan">Perempuan</option>
                 </select>
@@ -40,28 +40,46 @@
 				<input type="alamatweb" name="alamatweb" id="alamatweb"/>
 			</div>
 			<div>
-				<input type="submit" value="Daftar" class="tombol">
+				<input type="submit" value="Daftar" class="tombol" onclick="validasi">
 			</div>
 		</form>
 	</div>
-</body>
-<script language=javascript>
-	function validasi() {
-		var nama = document.getElementById("nama").value;
-		var username = document.getElementById("username").value;
-		var email = document.getElementById("email").value;
-		if (nama == "")
-        {
+<script>
+	function validasi(){
+		var form = document.forms["formulir"];
+		var nama = form.elements["nama"].value;
+		var username = form.elements["username"].value;
+		var email = form.elements["email"].value;
+		var password = form.elements["password"].value;
+		var telepon = form.elements["telepon"].value;
+		var gender = form.elements["gender"].value;
+		var alamatweb = form.elements["alamatweb"].value;
+
+		if(nama=="" && username=="" && email == "")
+		{
+			alert("Masukkan Nama, Username, dan Email Anda");
+		}
+		else if(nama == "")
+		{
 			alert("Masukkan nama Anda");
 		}
-        else if (username == "")
-        {
+		else if(username == "")
+		{
 			alert("Masukkan Username");
 		}
-		else if (email == "")
-        {
+		else if(email == "" || form.email.value.indexOf('@',0,'.')==-1)
+		{
 			alert("Masukkan Email");
+		}
+		else if(password == "")
+		{
+			confirm("Masukkan Password Anda");
+		}
+		else
+		{
+			confirm("Selamat, Anda Telah Berhasil Melakukan Resgistrasi");
 		}
 	}
 </script>
+</body>
 </html>
