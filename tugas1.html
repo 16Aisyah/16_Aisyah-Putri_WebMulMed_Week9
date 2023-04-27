@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Tugas1</title>
 	<link rel="stylesheet" type="text/css" href="tugas1.css">
 </head>
+
 <body>
-    <h1>Form Registrasi</h1>
+	<h1>Form Registrasi</h1>
 	<div class="login">
-		<form name="formulir" onSubmit="validasi()">
+		<form name="formulir" onSubmit="validasi(event)">
 			<div>
 				<label>Nama :</label>
 				<input type="text" name="nama" id="nama" />
 			</div>
-            <div>
+			<div>
 				<label>Username :</label>
 				<input type="username" name="username" id="username" />
 			</div>
-            <div>
+			<div>
 				<label>Email :</label>
 				<input type="email" name="email" id="email" />
 			</div>
@@ -26,60 +28,56 @@
 			</div>
 			<div>
 				<label>No Telepon :</label>
-				<input type="telepon" name="telepon" id="telepon"/>
+				<input type="telepon" name="telepon" id="telepon" />
 			</div>
-            <div>
+			<div>
 				<label>Jenis Kelamin :</label>
-                <select name="gender" id="gender">
-                    <option value="laki-laki">Laki - Laki</option>
-                    <option value="perempuan">Perempuan</option>
-                </select>
+				<select name="gender" id="gender">
+					<option value="laki-laki">Laki - Laki</option>
+					<option value="perempuan">Perempuan</option>
+				</select>
 			</div>
-            <div>
+			<div>
 				<label>Alamat Website :</label>
-				<input type="alamatweb" name="alamatweb" id="alamatweb"/>
+				<input type="alamatweb" name="alamatweb" id="alamatweb" />
 			</div>
 			<div>
 				<input type="submit" value="Daftar" class="tombol" onclick="validasi">
 			</div>
 		</form>
 	</div>
-<script>
-	function validasi(){
-		var form = document.forms["formulir"];
-		var nama = form.elements["nama"].value;
-		var username = form.elements["username"].value;
-		var email = form.elements["email"].value;
-		var password = form.elements["password"].value;
-		var telepon = form.elements["telepon"].value;
-		var gender = form.elements["gender"].value;
-		var alamatweb = form.elements["alamatweb"].value;
+	<script>
+		function validasi(event) {
+			event.preventDefault();
+			var form = document.forms["formulir"];
+			var nama = form.elements["nama"].value;
+			var username = form.elements["username"].value;
+			var email = form.elements["email"].value;
+			var password = form.elements["password"].value;
+			var telepon = form.elements["telepon"].value;
+			var gender = form.elements["gender"].value;
+			var alamatweb = form.elements["alamatweb"].value;
 
-		if(nama=="" && username=="" && email == "")
-		{
-			alert("Masukkan Nama, Username, dan Email Anda");
+			if (nama == "" && username == "" && email == "") {
+				alert("Masukkan Nama, Username, dan Email Anda");
+			}
+			else if (nama == "") {
+				alert("Masukkan nama Anda");
+			}
+			else if (username == "") {
+				alert("Masukkan Username");
+			}
+			else if (email == "" || form.email.value.indexOf('@', 0, '.') == -1) {
+				alert("Masukkan Email");
+			}
+			else if (password == "") {
+				confirm("Masukkan Password Anda");
+			}
+			else {
+				confirm("Selamat, Anda Telah Berhasil Melakukan Resgistrasi");
+			}
 		}
-		else if(nama == "")
-		{
-			alert("Masukkan nama Anda");
-		}
-		else if(username == "")
-		{
-			alert("Masukkan Username");
-		}
-		else if(email == "" || form.email.value.indexOf('@',0,'.')==-1)
-		{
-			alert("Masukkan Email");
-		}
-		else if(password == "")
-		{
-			confirm("Masukkan Password Anda");
-		}
-		else
-		{
-			confirm("Selamat, Anda Telah Berhasil Melakukan Resgistrasi");
-		}
-	}
-</script>
+	</script>
 </body>
+
 </html>
